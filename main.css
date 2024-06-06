@@ -1,0 +1,80 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --top_height: 5%;
+}
+.main{
+  background: url(./img/bg.jpg);
+  background-size: 20em;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.img-1{
+  width: 600px;
+  position: absolute;
+  top: var(--top_height);
+}
+.img-2{
+  width: 500px;
+  position: absolute;
+  top: calc(var(--top_height) * -1);
+}
+
+.animate{
+  animation: shake 0.5s infinite;
+}
+.btn{
+  width: 200px;
+  height: 100px;
+  border-radius: 20px;
+  border-color: transparent ;
+  background-color: aqua;
+  margin-top: 400px;
+  font-size: 30px;
+  font-weight:600 ;
+}
+.btn:hover{
+  background-color: rgb(54, 220, 220);
+}
+
+.text_ani {
+  position: absolute;
+  top: calc(var(--top_height) + 15%);
+  z-index: 10;
+  font-size: 100px;
+  font-weight: 600;
+  padding: 20px 40px;
+  color: white;
+  animation: text .5s linear;
+  background-color: rgb(42, 141, 216);
+  border-radius: 20px;
+}
+@keyframes text {
+  from{
+    transform: scale(0);
+  } to {
+    transform: scale(1);
+  }
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
