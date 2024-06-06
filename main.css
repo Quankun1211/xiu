@@ -78,3 +78,29 @@
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
+
+@media screen and (max-width: 600px) {
+  .main {
+    width: 100vw; margin: 0; padding: 0;
+  }
+  .img-1{
+    width: 400px;
+  }
+  .img-2{
+    width: 350px;
+  }
+  .text_ani {
+    width: 90%;
+    text-align: center;
+    position: absolute;
+    top: calc(var(--top_height) + 15%);
+    z-index: 10;
+    font-size: 50px;
+    font-weight: 600;
+    padding: 20px 40px;
+    color: white;
+    animation: text .5s linear;
+    background-color: rgb(42, 141, 216);
+    border-radius: 20px;
+  }
+}
